@@ -38,9 +38,9 @@ export const updateNote = async (req: Request, res: Response) => {
     try {
         if (!req.params.id) return res.status(400).json({ message: "Missing note id" })
         const noteId = parseInt(req.params.id);
-        const { data
+        const { title, content
         } = req.body;
-        const updatedNote = await noteService.updateNoteService(noteId, data);
+        const updatedNote = await noteService.updateNoteService(noteId, { title, content });
         res.status(200).json(updatedNote)
     } catch (error) {
         console.log("Something went wrong while updating note", error)
