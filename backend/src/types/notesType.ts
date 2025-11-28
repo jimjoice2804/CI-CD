@@ -9,3 +9,7 @@ export interface NoteTypes {
 export interface Person {
     name: string
 }
+
+export interface Person {
+    name: string
+}

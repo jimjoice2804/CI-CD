@@ -44,6 +44,3 @@ jobs:
                   tags: |
                       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
                       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-
-            - name: Trigger Render Deploy
-              run: curl -X POST ${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}
