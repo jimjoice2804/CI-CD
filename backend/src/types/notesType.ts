@@ -5,3 +5,7 @@ export interface NoteTypes {
     createdAt: Date;
     updatedAt: Date;
 }
+
+export interface Person {
+    name: string
+}
